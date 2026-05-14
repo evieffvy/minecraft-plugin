@@ -1,59 +1,59 @@
 # HungerGames — LootChest & Airdrop Plugin
 
-Minecraft plugin สำหรับ Paper/Purpur 1.21 ระบบจัดการกล่อง loot และ airdrop สำหรับโหมด Hunger Games
+A Minecraft plugin for Paper/Purpur 1.21 featuring a loot chest system and airdrops designed for Hunger Games servers.
 
 ## Features
 
-- **Loot Chest** — register chest block ในแผนที่ให้สุ่ม item อัตโนมัติเมื่อเปิด แบ่ง rarity เป็น Common / Uncommon / Rare
-- **Airdrop** — drop กล่อง airdrop ลงพื้นที่สุ่มรอบ spawn ตาม interval ที่กำหนด หรือสั่ง manual ได้ทันที
-- ปรับแต่ง loot table ได้ทั้งหมดผ่าน `config.yml` โดยไม่ต้อง restart server
+- **Loot Chests** — Register chest blocks on the map to automatically fill with random items when opened. Items are divided into Common, Uncommon, and Rare rarities.
+- **Airdrops** — Drop airdrop crates at a random location around spawn on a set interval, or trigger one manually at any time.
+- Fully customizable loot tables via `config.yml` with no server restart required.
 
 ## Requirements
 
 - Java 21+
-- Paper หรือ Purpur 1.21
+- Paper or Purpur 1.21
 
 ## Installation
 
-1. Build plugin ด้วย Gradle:
+1. Build the plugin with Gradle:
    ```bash
    ./gradlew jar
    ```
-2. คัดลอก `build/libs/LootChest+Airdrop.jar` ไปวางใน `plugins/` ของ server
-3. Start/Restart server
-4. แก้ไข `plugins/HungerGames/config.yml` ตามต้องการ
+2. Copy `build/libs/LootChest+Airdrop.jar` into your server's `plugins/` folder.
+3. Start or restart the server.
+4. Edit `plugins/HungerGames/config.yml` as needed.
 
 ## Commands
 
-| Command | Permission | คำอธิบาย |
+| Command | Permission | Description |
 |---|---|---|
-| `/hg listchests` | ทุกคน | ดูรายการกล่อง loot ทั้งหมด |
-| `/hg addchest` | `hungergames.admin` | Register chest ที่มองอยู่เป็น loot chest |
-| `/hg removechest` | `hungergames.admin` | ลบ loot chest ที่มองอยู่ |
-| `/hg airdrop` | `hungergames.admin` | Trigger airdrop ทันที |
-| `/hg reload` | `hungergames.admin` | Reload config.yml โดยไม่ restart |
+| `/hg listchests` | Everyone | List all registered loot chests |
+| `/hg addchest` | `hungergames.admin` | Register the chest you are looking at |
+| `/hg removechest` | `hungergames.admin` | Unregister the chest you are looking at |
+| `/hg airdrop` | `hungergames.admin` | Trigger an airdrop immediately |
+| `/hg reload` | `hungergames.admin` | Reload config.yml without restarting |
 
-> Permission `hungergames.admin` จะให้อัตโนมัติกับผู้เล่นที่เป็น OP
+> `hungergames.admin` is granted automatically to OP players.
 
 ## Configuration
 
 ```yaml
 airdrop:
-  interval-seconds: 300   # ทุก 5 นาที (0 = ปิด auto)
-  radius: 500             # สุ่มใน radius นี้จาก spawn
-  items-count: 5          # จำนวน item ใน airdrop chest
+  interval-seconds: 300   # every 5 minutes (0 = disable auto)
+  radius: 500             # random location within this radius from spawn
+  items-count: 5          # number of items in each airdrop crate
 
 rarity-weights:
   common: 60    # %
   uncommon: 30  # %
-  # rare = ที่เหลือ (10%)
+  # rare = remainder (10%)
 
 items-per-chest:
   min: 3
   max: 6
 ```
 
-แก้ไข loot ได้ในหัวข้อ `loot.common`, `loot.uncommon`, `loot.rare` และ `airdrop.loot`
+Loot tables can be edited under `loot.common`, `loot.uncommon`, `loot.rare`, and `airdrop.loot`.
 
 ## Build from Source
 
@@ -63,7 +63,7 @@ cd minecraft-plugin
 ./gradlew jar
 ```
 
-ทดสอบ local ด้วย Paper server:
+To test locally with a Paper server:
 
 ```bash
 ./gradlew runServer
