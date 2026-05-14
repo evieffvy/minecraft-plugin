@@ -1,0 +1,14 @@
+{
+  "name": "hungergames-testbot",
+  "version": "1.0.0",
+  "description": "Mineflayer bot สำหรับทดสอบ plugin โดยไม่ต้องมีเกม",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test-join": "node bot.js --action=join",
+    "test-game": "node bot.js --action=game"
+  },
+  "dependencies": {
+    "mineflayer": "^4.23.0"
+  }
+}

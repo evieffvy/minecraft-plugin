@@ -1,0 +1,79 @@
+airdrop:
+  interval-seconds: 300   # ทุก 5 นาที (0 = ปิด auto)
+  radius: 500             # สุ่มใน radius นี้จาก spawn
+  items-count: 5          # จำนวน item ใน airdrop chest
+  loot:
+    - material: DIAMOND_SWORD
+      amount: 1
+    - material: DIAMOND_CHESTPLATE
+      amount: 1
+    - material: DIAMOND_HELMET
+      amount: 1
+    - material: DIAMOND_BOOTS
+      amount: 1
+    - material: DIAMOND_LEGGINGS
+      amount: 1
+    - material: ENCHANTED_GOLDEN_APPLE
+      amount: 1
+    - material: BOW
+      amount: 1
+    - material: ARROW
+      amount: 32
+    - material: GOLDEN_APPLE
+      amount: 3
+
+rarity-weights:
+  common: 60    # %
+  uncommon: 30  # %
+  # rare = ที่เหลือ (10%)
+
+items-per-chest:
+  min: 3
+  max: 6
+
+loot:
+  common:
+    - material: BREAD
+      amount: 2
+    - material: COOKED_BEEF
+      amount: 1
+    - material: WOODEN_SWORD
+      amount: 1
+    - material: LEATHER_HELMET
+      amount: 1
+    - material: LEATHER_BOOTS
+      amount: 1
+    - material: TORCH
+      amount: 4
+    - material: ARROW
+      amount: 8
+    - material: STRING
+      amount: 3
+
+  uncommon:
+    - material: STONE_SWORD
+      amount: 1
+    - material: BOW
+      amount: 1
+    - material: IRON_HELMET
+      amount: 1
+    - material: IRON_BOOTS
+      amount: 1
+    - material: GOLDEN_APPLE
+      amount: 1
+    - material: COOKED_BEEF
+      amount: 3
+    - material: ARROW
+      amount: 16
+
+  rare:
+    - material: IRON_SWORD
+      amount: 1
+    - material: IRON_CHESTPLATE
+      amount: 1
+    - material: IRON_LEGGINGS
+      amount: 1
+    - material: DIAMOND_SWORD
+      amount: 1
+    - material: ENCHANTED_GOLDEN_APPLE
+      amount: 1

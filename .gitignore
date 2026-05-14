@@ -1,0 +1,18 @@
+# Build output
+build/
+.gradle/
+
+# Server runtime data (ไม่ควร public)
+run/
+
+# Node
+bot/node_modules/
+bot/package-lock.json
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+*.iml
+.vscode/

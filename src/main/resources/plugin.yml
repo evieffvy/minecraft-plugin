@@ -1,0 +1,19 @@
+name: HungerGames
+version: '${version}'
+main: com.hungergames.HungerGamesPlugin
+api-version: '1.21'
+# Purpur/Paper 1.21
+authors:
+  - YourTeam
+description: Hunger Games minigame plugin
+
+commands:
+  hg:
+    description: Main HungerGames command
+    usage: /hg <join|leave|start|stop|status|setlobby>
+    aliases: [hungergames]
+
+permissions:
+  hungergames.admin:
+    description: Admin commands (start, stop, setlobby)
+    default: op
